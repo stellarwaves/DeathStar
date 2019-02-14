@@ -25,7 +25,7 @@ class PLayer {
 -   this.speed
 -   this.size
 -   this.ctx
-
+- 
 -   draw()
 -   update()
 -   checkColitionEnemy()
@@ -40,7 +40,7 @@ class Enemie1{
 -   this.speed
 -   this.size
 -   this.ctx
-
+- 
 -   draw()
 -   update()
 -   checkColitionEnemy()
@@ -58,7 +58,7 @@ class Bullet{
 -   this.speed
 -   this.size
 -   this.ctx
-
+- 
 -   draw()
 -   update()
 -   checkColitionEnemy()
@@ -70,7 +70,7 @@ class Game{
 -   this.player
 -   this.enemies
 -   this.isGameOver
-
+- 
 -   startLoop()
 -   updateCanvas()
 -   clearCanvas()
