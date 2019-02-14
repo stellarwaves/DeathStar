@@ -18,7 +18,7 @@ El jugador deberá impedir colisiones destruyendo enemigos dirigidos a su posici
 
 Definicion de clases y métodos.
 
-- class PLayer {
+class PLayer {
 -   this.canvas
 -   this.lives
 -   this.rotation
@@ -30,7 +30,7 @@ Definicion de clases y métodos.
 -   update()
 -   checkColitionEnemy()
 -   loseLive()
-- }
+}
 
 - class Enemie1{
 -   this.canvas
