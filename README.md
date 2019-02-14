@@ -11,8 +11,11 @@ Definición del MVP.
 El jugador deberá impedir colisiones destruyendo enemigos dirigidos a su posición (centro del canvas).  
 
 ## Backlog
-   class Asteroids {}
-
+- Asteroides 
+- Fragmentación de asteroides
+- Energía del player
+- Campo de fuerza del player
+- Ranking 
 
 ## Estructuras de Datos
 
@@ -97,13 +100,28 @@ funciones de transicion.
 
 Definicion de las tareas por orden de prioridad
 
+- Crear repositorio y ficheros (player.js, enemy.js, game.js, index.html, style.css).
+- Layouts e interacciones. 
+- Crear game.
+- Crar loop.
+- Loop testing.
+- Crear player.
+- Pintar player en canvas.
+- Rotation del player.
+- Crear enemies / Mover enemies.
+- Random de enemies.
+- Colisión de enemies con player.
+- Crear bullet.
+- Pintar bullet en canvas / Trayectoria de bullet.
+- Colisión de bullet con enemies (viceversa).
+
 ## Links
 
 ### Git
 
 Especificar las url del proyecto y del deploy
 
-[Link Repositorio](http://github.com)
+[Link Repositorio](https://github.com/stellarwaves/DeathStar.git)
 
 [Link Deploy](http://github.com)
 
