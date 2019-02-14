@@ -30,9 +30,9 @@ class PLayer {
 -   update()
 -   checkColitionEnemy()
 -   loseLive()
-}
+- }
 
-- class Enemie1{
+class Enemie1{
 -   this.canvas
 -   this.lives
 -   this.x
@@ -47,9 +47,9 @@ class PLayer {
 -   checkColitionBullet()
 - }
 
-- class Enemie2 extends Enemie1{}
+class Enemie2 extends Enemie1{}
 
-- class Bullet{
+class Bullet{
 -   this.canvas
 -   this.x
 -   this.y
@@ -64,7 +64,7 @@ class PLayer {
 -   checkColitionEnemy()
 - }
 
-- class Game{
+class Game{
 -   this.canvas
 -   this.ctx
 -   this.player
