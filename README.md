@@ -18,65 +18,65 @@ El jugador deberá impedir colisiones destruyendo enemigos dirigidos a su posici
 
 Definicion de clases y métodos.
 
-class PLayer {
-   this.canvas
-   this.lives
-   this.rotation
-   this.speed
-   this.size
-   this.ctx
+- class PLayer {
+-   this.canvas
+-   this.lives
+-   this.rotation
+-   this.speed
+-   this.size
+-   this.ctx
 
-   draw()
-   update()
-   checkColitionEnemy()
-   loseLive()
-}
+-   draw()
+-   update()
+-   checkColitionEnemy()
+-   loseLive()
+- }
 
-class Enemie1{
-   this.canvas
-   this.lives
-   this.x
-   this.y
-   this.speed
-   this.size
-   this.ctx
+- class Enemie1{
+-   this.canvas
+-   this.lives
+-   this.x
+-   this.y
+-   this.speed
+-   this.size
+-   this.ctx
 
-   draw()
-   update()
-   checkColitionEnemy()
-   checkColitionBullet()
-}
+-   draw()
+-   update()
+-   checkColitionEnemy()
+-   checkColitionBullet()
+- }
 
-class Enemie2 extends Enemie1{}
+- class Enemie2 extends Enemie1{}
 
-class Bullet{
-   this.canvas
-   this.x
-   this.y
-   this.color
-   this.colition
-   this.speed
-   this.size
-   this.ctx
+- class Bullet{
+-   this.canvas
+-   this.x
+-   this.y
+-   this.color
+-   this.colition
+-   this.speed
+-   this.size
+-   this.ctx
 
-   draw()
-   update()
-   checkColitionEnemy()
-}
+-   draw()
+-   update()
+-   checkColitionEnemy()
+- }
 
-class Game{
-   this.canvas
-   this.ctx
-   this.player
-   this.enemies
-   this.isGameOver
+- class Game{
+-   this.canvas
+-   this.ctx
+-   this.player
+-   this.enemies
+-   this.isGameOver
 
-   startLoop()
-   updateCanvas()
-   clearCanvas()
-   checkAllCollitions()
-   gameOverCallback()
-}
+-   startLoop()
+-   updateCanvas()
+-   clearCanvas()
+-   checkAllCollitions()
+-   gameOverCallback()
+- }
 
 ## States y States Transitions
 
