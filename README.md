@@ -103,7 +103,7 @@ Definicion de las tareas por orden de prioridad
 - Crear repositorio y ficheros (player.js, enemy.js, game.js, index.html, style.css).
 - Layouts e interacciones. 
 - Crear game.
-- Crar loop.
+- Crear loop.
 - Loop testing.
 - Crear player.
 - Pintar player en canvas.
