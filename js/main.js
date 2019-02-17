@@ -1,4 +1,4 @@
-'use strict'
+
 const main = () => {
 
    const buildDom = (html) => {
@@ -7,28 +7,58 @@ const main = () => {
    };
 
    const buildSplashScreen = () => {
-      const splashScreen= buildDom(
-         `<section class="splash-screen">
+      const splashScreen = buildDom (`
+         <section class="splash-screen">
             <h1>Start game</h1>
             <button>Start</button>
-         </section>`
-      )
+         </section>
+      `)
 
       const startButton = document.querySelector('button');
       startButton.addEventListener('click', buildGameScreen);
-   }
+   };
 
    const buildGameScreen = () => {
-      const gameScreen = buildDom(
-         `  <section class="game-screen">
-               <h1>Game</h1>
-               <canvas></canvas>
-            </section>
-         `
-      )
+      const gameScreen = buildDom ( `  
+         <section class="game-screen">
+            <canvas></canvas>
+         </section>
+      ` )
 
-      setTimeout(buildGameOverScreen, 500);
-   }
+      const width = document.querySelector('.game-screen').offsetWidth;
+      const height = document.querySelector('.game-screen').offsetHeight;
+      
+      const canvasElement = document.querySelector('canvas');
+   
+      canvasElement.setAttribute('width', width);
+      canvasElement.setAttribute('height', height);
+
+      //setTimeout(buildGameOverScreen, 500);
+
+      const game = new Game(canvasElement);
+      game.gameOverCallback(buildGameOverScreen);
+      
+      game.startLoop();
+
+
+      const setPlayerDirection = (event) => {
+         if(event.code === 'ArrowLeft'){
+            game.player.setDirection(-1);
+            console.log('Left')
+         } else if(event.code === 'ArrowRight'){
+            game.player.setDirection(1);
+            console.log('Right')
+         };
+         if (event.code === 'ArrowUp') {
+            game.player.shoot();
+            console.log('shoot')
+			}
+      };
+
+      document.addEventListener('keydown', setPlayerDirection);
+
+   };
+
 
    const buildGameOverScreen = () => {
       const gameOverScreen = buildDom(
@@ -45,7 +75,7 @@ const main = () => {
 
       const playButton = document.getElementById('play');
       playButton.addEventListener('click', buildGameScreen);
-   }
+   };
 
    buildSplashScreen();
 
