@@ -13,7 +13,7 @@ class Game {
       this.player = new Player(this.canvas, 1);
 
       const loop = () => {
-         if(Math.random() > 0.97) {
+         if(Math.random() > 0.95) {
             const y = Math.random() * this.canvas.height;
             this.enemies.push(new Enemy(this.canvas, y))
          }

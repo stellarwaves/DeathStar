@@ -8,9 +8,9 @@ const main = () => {
 
    const buildSplashScreen = () => {
       const splashScreen = buildDom (`
-         <section class="splash-screen">
-            <h1>Start game</h1>
-            <button>Start</button>
+         <section class="splash-screen splash">
+            <img src="./img/ui/millennium-falcon-smugglers-run-logo.jpg">
+            <button class="btn">Start</button>
          </section>
       `)
 
@@ -20,8 +20,11 @@ const main = () => {
 
    const buildGameScreen = () => {
       const gameScreen = buildDom ( `  
-         <section class="game-screen">
-            <canvas></canvas>
+         <section class="game-screen game">
+         <div id='stars'></div>
+         <div id='stars2'></div>
+         <div id='stars3'></div>
+         <canvas></canvas>
          </section>
       ` )
 
