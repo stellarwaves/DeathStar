@@ -6,6 +6,7 @@ class Game {
       this.ctx = canvas.getContext('2d');
       this.player;
       this.enemies = [];
+      this.lasers = [];
       this.isGameOver = false;
    }
 
@@ -39,6 +40,10 @@ class Game {
       this.enemies.forEach((enemy) => {
          enemy.update();
       });
+      
+      this.lasers.forEach((laser) => {
+         laser.update();
+      })
    };
 
    clearCanvas(){
@@ -47,6 +52,11 @@ class Game {
 
    drawCanvas(){
       this.player.draw();
+
+      this.lasers.forEach((laser) => {
+         laser.draw();
+      })
+      
       this.enemies.forEach((enemy) => {
          enemy.draw();
       });
@@ -68,6 +78,15 @@ class Game {
                this.onGameOver();
             }
          }
+      });
+      this.enemies.forEach((enemy) => {
+         this.lasers.forEach((laser) => {
+            if(laser.checkColitionLaser(enemy)){
+               console.log('dead enemy');
+               this.enemies.splice(this.enemies.indexOf(enemy), 1);
+               this.lasers.splice(this.lasers.indexOf(laser), 1);
+            }
+         });
       });
    };
 

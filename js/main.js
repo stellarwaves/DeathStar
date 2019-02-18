@@ -53,7 +53,7 @@ const main = () => {
             console.log('Right')
          };
          if (event.code === 'ArrowUp') {
-            game.player.shoot();
+            return game.lasers.push(game.player.shoot());
             console.log('shoot')
 			}
       };
