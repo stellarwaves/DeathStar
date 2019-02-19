@@ -8,6 +8,8 @@ class Game {
       this.enemies = [];
       this.lasers = [];
       this.isGameOver = false;
+      this.score = 0;
+      
    }
 
    startLoop () {
@@ -85,6 +87,7 @@ class Game {
                console.log('dead enemy');
                this.enemies.splice(this.enemies.indexOf(enemy), 1);
                this.lasers.splice(this.lasers.indexOf(laser), 1);
+               this.score += 1;
             }
          });
       });

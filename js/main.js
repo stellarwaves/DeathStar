@@ -6,11 +6,20 @@ const main = () => {
       main.innerHTML = html;
    };
 
-   const buildSplashScreen = () => {
+   const buildSplashScreen = () => { 
       const splashScreen = buildDom (`
          <section class="splash-screen splash">
-            <img src="./img/ui/millennium-falcon-smugglers-run-logo.jpg">
-            <button class="btn">Start</button>
+            <div class="splash-content">
+               <div id='stars'></div>
+               <div id='stars2'></div>
+               <div id='stars3'></div>
+               <img src="./img/ui/millennium-falcon-smugglers-run-logo.jpg">
+               <button class="btn">Start</button>
+               <p>Controls: Arrows left and right to move, arrow up to fire.</p>
+               <audio controls autoplay loop>
+                  <source src="./audio/the-adventures-of-han.mp3" type="audio/mpeg">
+               </audio>
+            </div>
          </section>
       `)
 
@@ -18,13 +27,17 @@ const main = () => {
       startButton.addEventListener('click', buildGameScreen);
    };
 
+
    const buildGameScreen = () => {
       const gameScreen = buildDom ( `  
          <section class="game-screen game">
-         <div id='stars'></div>
-         <div id='stars2'></div>
-         <div id='stars3'></div>
-         <canvas></canvas>
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+            <canvas></canvas>
+            <audio controls autoplay loop>
+               <source src="./audio/flying-with-chewie.mp3" type="audio/mpeg">
+            </audio>
          </section>
       ` )
 
@@ -53,9 +66,9 @@ const main = () => {
             console.log('Right')
          };
          if (event.code === 'ArrowUp') {
-            return game.lasers.push(game.player.shoot());
-            console.log('shoot')
-			}
+            console.log('shoot');
+            game.lasers.push(game.player.shoot());
+         }
       };
 
       document.addEventListener('keydown', setPlayerDirection);
@@ -66,9 +79,20 @@ const main = () => {
    const buildGameOverScreen = () => {
       const gameOverScreen = buildDom(
          `  <section class="end-screen">
-               <h1>End Game</h1>
-               <button id="back">Back to splash</button>
-               <button id="play">Play Again</button>
+               <div class="end-content">
+               <div id='stars'></div>
+               <div id='stars2'></div>
+               <div id='stars3'></div>
+                  <h1>GAME OVER</h1>
+                  <p>"Remember, the Force will be with you…always." – Obi-Wan Kenobi</p>
+                  <ul>
+                     <li><button class="btn" id="play">Play Again</button></li>
+                     <li><button class="btn" id="back">Back to splash</button></li>
+                  </ul>
+               </div>
+               <audio controls autoplay loop>
+                  <source src="./audio/good-thing-you-were-listening.mp3" type="audio/mpeg">
+               </audio>
             </section>
          `
       )

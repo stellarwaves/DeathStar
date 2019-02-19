@@ -2,7 +2,7 @@
 
 class Enemy {
    constructor (canvas, x, enemy_image_url="img/player/Asteroid.png"){
-      this.size = 30;
+      this.size = 50;
       this.canvas = canvas;
       this.ctx = this.canvas.getContext('2d')
       this.enemy_image = new Image();
@@ -18,6 +18,6 @@ class Enemy {
    };
 
    draw() {
-      this.ctx.drawImage(this.enemy_image, this.x, this.y, 50, 50);
+      this.ctx.drawImage(this.enemy_image, this.x, this.y, this.size, this.size);
    }
 }

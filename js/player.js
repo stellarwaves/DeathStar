@@ -11,7 +11,7 @@ class Player {
       this.y = this.canvas.height - 69;
       this.speed = 4;
       this.direction = 0;
-      this.lives = 10;
+      this.lives = 1;
    };
 
    update() {
@@ -50,7 +50,10 @@ class Player {
 
    shoot(){
       //(x, y, width, height)
-      return new Laser(this.canvas, this.x+this.size/2, this.y);
+      const newLaser =  new Laser(this.canvas, this.x+this.size/2, this.y);  
+      newLaser.shoot_audio.currentTime = 0;
+      newLaser.shoot_audio.play(); 
+      return newLaser;
    }
 
    loseLive() {

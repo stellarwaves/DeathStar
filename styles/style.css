@@ -12,11 +12,36 @@ body {
   padding: 0;
 }
 
-/*---- section ----*/
+audio{
+  display: none;
+}
+
+/*---- ALL ----*/
 canvas{
   position: relative;
 }
 
+.btn{
+  width: 200px;
+  padding: 12px;
+  color: #f2ae0a;
+  border: 2px solid #f2ae0a;
+  border-radius: 6px;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn:hover{
+  background: rgba(242, 174, 10, 0.2);
+}
+
+
+/*---- splash ----*/
 .game-screen {
   width: 100%;
   height: 100vh;
@@ -25,29 +50,74 @@ canvas{
 .splash{
   height: 100vh;
   background: #000;
+  display: grid;
+}
+
+.splash-content{
+  align-self: center;
+}
+
+.splash-content p{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  color: #13D6F2;
+  margin-top: 60px;
+  font-size: 10px;
 }
 
 .splash img{
-  width: 60%;
+  width: 50%;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
 }
 
-.btn{
-  padding: 10px 20px;
-  color: #f2ae0a;
-  border: 2px solid #f2ae0a;
-  border-radius: 4px;
-  background: transparent;
-  text-transform: uppercase;
+
+/*---- Game Over ----*/
+.end-screen{
+  height: 100vh;
+  display: grid;
+  background: #000;
 }
 
+.end-content{
+  align-self: center;
+}
+
+.end-content h1{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 70px;
+  margin: 0 0 60px 0;
+  color: #fce100;
+  text-align: center;
+}
+
+.end-content ul{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.end-content ul li{
+  margin: 0 10px; 
+  display: inline-block;
+}
+
+.end-content ul li .btn{
+  margin: 0;
+}
+.end-content p{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 11px;
+  margin: 0 0 70px 0;
+  color: #13D6F2;
+  text-align: center;
+}
 
 /*------ Stars ------*/
 
 .game {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #000 100%);
   overflow: hidden;
 }
 
