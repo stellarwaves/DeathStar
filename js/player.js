@@ -11,7 +11,7 @@ class Player {
       this.y = this.canvas.height - 69;
       this.speed = 4;
       this.direction = 0;
-      this.lives = 1;
+      this.lives = 20;
    };
 
    update() {

@@ -9,7 +9,7 @@ class Enemy {
       this.enemy_image.src = enemy_image_url;
       this.x = x;
       this.y = 0;
-      this.speed = 4;
+      this.speed = 3;
       this.direction = 1;
    }
 

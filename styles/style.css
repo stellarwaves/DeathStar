@@ -115,9 +115,9 @@ canvas{
 
 /*------ Stars ------*/
 
-.game {
+.game-screen {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #000 100%);
+  background: radial-gradient(ellipse at bottom, #000 0%, #000 100%);
   overflow: hidden;
 }
 

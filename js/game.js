@@ -7,9 +7,9 @@ class Game {
       this.player;
       this.enemies = [];
       this.lasers = [];
+      this.explotion = [];
       this.isGameOver = false;
       this.score = 0;
-      
    }
 
    startLoop () {
@@ -17,8 +17,8 @@ class Game {
 
       const loop = () => {
          if(Math.random() > 0.95) {
-            const y = Math.random() * this.canvas.height;
-            this.enemies.push(new Enemy(this.canvas, y))
+            const x = Math.random() * this.canvas.width;
+            this.enemies.push(new Enemy(this.canvas, x))
          }
 
          this.checkAllCollitions();
@@ -62,6 +62,7 @@ class Game {
       this.enemies.forEach((enemy) => {
          enemy.draw();
       });
+
    };
 
    gameOverCallback(callback) {
@@ -87,6 +88,7 @@ class Game {
                console.log('dead enemy');
                this.enemies.splice(this.enemies.indexOf(enemy), 1);
                this.lasers.splice(this.lasers.indexOf(laser), 1);
+               //this.explotion.push(New Explotion(this.canvas,laser.x,laser.y));
                this.score += 1;
             }
          });
