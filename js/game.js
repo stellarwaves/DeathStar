@@ -7,7 +7,6 @@ class Game {
       this.player;
       this.enemies = [];
       this.lasers = [];
-      this.explotion = [];
       this.isGameOver = false;
       this.score = 0;
    }
@@ -88,7 +87,6 @@ class Game {
                console.log('dead enemy');
                this.enemies.splice(this.enemies.indexOf(enemy), 1);
                this.lasers.splice(this.lasers.indexOf(laser), 1);
-               //this.explotion.push(New Explotion(this.canvas,laser.x,laser.y));
                this.score += 1;
             }
          });

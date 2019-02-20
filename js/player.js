@@ -20,7 +20,7 @@ class Player {
    
    draw(){
       //(x, y, width, height)
-      this.ctx.drawImage(this.player_image,this.x - 69/2, this.y - 50, 69, 91);
+      this.ctx.drawImage(this.player_image,this.x - 69/2, this.y - 100, 69, 91);
    };
 
    //checklimits of the spaceship
