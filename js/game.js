@@ -21,7 +21,7 @@ class Game {
             this.enemy_image.src = "img/player/Asteroid.png";
             this.enemies.push(new Enemy(this.canvas, x, this.enemy_image, 3));
          }
-         if(Math.random() > 0.98) {
+         if(Math.random() > 0.97) {
             const x = Math.random() * this.canvas.width;
             this.enemy_image = new Image();
             this.enemy_image.src = './img/player/tie_fighter.png';

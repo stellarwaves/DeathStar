@@ -6,7 +6,10 @@ const main = () => {
       main.innerHTML = html;
    };
 
+   
    const buildSplashScreen = () => { 
+   
+   
       const splashScreen = buildDom (`
          <section class="splash-screen splash">
             <div class="splash-content">
@@ -21,10 +24,11 @@ const main = () => {
                </audio>
             </div>
          </section>
-      `)
-
+      `)                  
       const startButton = document.querySelector('button');
+
       startButton.addEventListener('click', buildGameScreen);
+      startButton.addEventListener('click', playAudio);
    };
 
 
