@@ -31,7 +31,6 @@ const main = () => {
    const buildGameScreen = () => {
       const gameScreen = buildDom ( `  
          <section class="game-screen game">
-            <p id="score"></p>
             <div id='stars'></div>
             <div id='stars2'></div>
             <div id='stars3'></div>
@@ -46,10 +45,6 @@ const main = () => {
       const height = document.querySelector('.game-screen').offsetHeight;
       
       const canvasElement = document.querySelector('canvas');
-
-      const score = document.getElementById('score');
-      score.innerHTML = 
-
    
       canvasElement.setAttribute('width', width);
       canvasElement.setAttribute('height', height);

@@ -15,9 +15,17 @@ class Game {
       this.player = new Player(this.canvas, 1);
 
       const loop = () => {
-         if(Math.random() > 0.95) {
+         if(Math.random() > 0.94) {
             const x = Math.random() * this.canvas.width;
-            this.enemies.push(new Enemy(this.canvas, x))
+            this.enemy_image = new Image();
+            this.enemy_image.src = "img/player/Asteroid.png";
+            this.enemies.push(new Enemy(this.canvas, x, this.enemy_image, 3));
+         }
+         if(Math.random() > 0.98) {
+            const x = Math.random() * this.canvas.width;
+            this.enemy_image = new Image();
+            this.enemy_image.src = './img/player/tie_fighter.png';
+            this.enemies.push(new Enemy(this.canvas, x, this.enemy_image, 5));
          }
 
          this.checkAllCollitions();
@@ -61,7 +69,9 @@ class Game {
       this.enemies.forEach((enemy) => {
          enemy.draw();
       });
-
+      this.ctx.font = "20px Arial";
+      this.ctx.fillStyle = "#13D6F2";
+      this.ctx.fillText('Score: ' + this.score , 50, 50);
    };
 
    gameOverCallback(callback) {
